@@ -362,7 +362,7 @@ color: blue;
   display: none;
 }
 
-@media (max-width:480px)
+@media screen and(max-width:768px)
 {
     .video{
       display: none;
@@ -408,5 +408,8 @@ color: blue;
       text-align: center;
       font-size: xx-small;
     }
+     #box{
+    width: 300px;
+    height:385px;
      
 } 
