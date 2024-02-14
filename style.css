@@ -1,0 +1,412 @@
+ *{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.video{
+    width: 100%;
+    height: auto;
+}  
+.video video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9)
+{
+    .video video
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+.logo{
+    font-size:x-large;
+    font-family: 'Times New Roman', Times, serif;
+  }
+#logo2{
+      font-family:cursive;
+      font-size:medium;
+  }
+#header{
+      font-family: 'Times New Roman', Times, serif;
+      font-size:20px;
+      font-weight:lighter;
+      left: 0%;
+      right: 0%;
+      top:0%;
+      padding:30px;
+      box-sizing: border-box;
+  }
+  #text{
+      float:left;
+      margin-left:10px;
+    }
+  #header ul{
+      list-style-type: none;
+      float: right;
+      font-size: 20px;
+      font-weight:400;
+      
+  }
+  #header ul li
+  {
+      padding: 5px; 
+      display: inline-block;
+      margin: 0px 0px;
+      
+  }
+  #header ul li a{
+  text-decoration: none;
+  text-align: center;
+  color:red;font-weight:bolder;
+  padding:6px;
+  border-radius:10px;
+  padding:10px;
+  }
+ #header ul li:hover{
+    font-size:20px;
+    border-style:groove;
+    color:black;
+    border-color: yellow;
+    border-width :3px;
+    border-radius: 20px;
+ }
+ 
+  /* - ----  heder completed ---- */
+
+  .leftandright{
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: auto;
+    position: relative;
+    column-gap: 10px;
+    box-sizing: border-box;
+    padding: 50px;
+  }
+  #homepageleft
+  {
+    box-sizing: border-box;
+    float: left;
+    padding: 60px 50px 50px 100px;
+  }
+  #homepageright
+  {
+    box-sizing: border-box;
+    padding-left: 210px;
+  }
+  #name{
+    color:red;
+    display: inline;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:60px;
+    animation-name:colourschange;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+  }
+  @keyframes colourschange 
+  {
+    0%{
+      color: red;
+    }
+    10%{color: blue;}
+    20%{
+      color: orange;
+    }
+    30%{
+      color: aqua;
+    }
+    50%{
+      color: greenyellow;
+    }
+    
+  }
+  
+ .hi{
+  font-family:'Times New Roman', Times, serif;
+  text-shadow: 5px 8px 5px black ;
+  color:blue;
+  font-size: 30px;
+}
+.myname{
+  font-family:'Times New Roman', Times, serif;
+  text-shadow: 5px 8px 5px black ;
+  color:orange;
+  font-size:40px;
+  
+}
+.skill{
+  color: aqua;
+  font-size: 20px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:aqua;
+  
+  
+}
+.myname::after{
+  content: ' SRINIVAS ';
+  font-family:'Times New Roman', Times, serif;
+  text-shadow: 5px 8px 5px black ;
+  color: red;
+  font-size: 45px;
+  animation-name:name;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes name
+{
+  0%{
+      color: red;
+      text-shadow: 5px 8px 5px black;
+  }
+  10%{
+      color:aqua;
+      text-shadow: 5px 8px 5px aquamarine;
+  }
+  20%{
+      color: yellow;
+      text-shadow: 5px 8px 5px red;
+  }
+  30%{
+      color: blue;
+      text-shadow: 5px 8px 5px aqua;
+  }
+  50%{
+      color: red;
+      text-shadow: 5px 8px 5px yellow
+  }
+  60%{
+      color: green;
+      text-shadow: 5px 8px 5px greenyellow;
+  }
+  
+}
+
+  button{
+    background-color: transparent;
+    padding:3px 20px 3px 20px;
+    color:red;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 30px;
+    border-color:yellow;
+    border-width: 3px;
+    font-size:20px;
+    margin: 10px;
+  }
+  #reg:hover{
+    color: black;
+  }
+  #reg{
+    color: red;
+  }
+
+   button a{
+    text-decoration: none;
+  }
+  button:hover{
+    border-color:orange;
+    background-color:orange;
+    color:black;
+  }
+
+  /* -----completed --------*/
+  #boxlogin{
+    text-align: center;
+    border-style: solid;
+    border-color:blue;
+    color: red;
+    border-radius: 25px;
+    font-size: 30px;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.text-container {
+  text-align:center;
+  animation: slideIn;
+  animation-duration:2s;
+  animation-fill-mode:forwards; 
+}
+@keyframes slideIn{
+  0%{
+    opacity: 0;
+    transform: translateX(-1100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }}
+  #box{
+    width: 300px;
+    height:385px;
+    backdrop-filter: blur(3px);
+    border-style: solid;
+    border-color:white;
+    border-radius: 8px;
+}
+form #form {
+display: block;
+margin: 20px;
+margin-top: 22px;
+width: 240px;
+color:white;
+height: 35px;
+background: transparent;
+background-color: transparent;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom:3px solid orange;
+font-size: 15px;
+font-family: sans-serif;
+letter-spacing: 1px;
+}
+#fntend{
+  color:white;
+}
+#fntend:hover{
+  color: aqua;
+}
+form #form:focus{
+outline: none;
+
+} 
+::placeholder{
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+}
+form #buttons{
+display: inline;
+text-align: center;
+border-radius: 25px;
+margin-left: 30px;
+border-color:#ff7200;
+background-color:#ff7200;
+color: black;
+border-style: solid;
+width: 100px;
+padding:2px 3px 2px 3px;
+}
+ form #buttons:hover{
+  background-color:aqua;
+  border-color:aqua;
+  color: black;
+}
+#boxbuttonreg a{
+  color: black;
+}
+#boxbuttonreg {
+  border-color:#ff7200;
+  background-color:#ff7200;
+  color: black;
+  border-style: solid;
+  padding:2px 3px 2px 3px;
+  border-radius: 25px;
+  width: 100px;
+  text-decoration: underline; 
+}#boxbuttonreg:hover{
+  background-color:aqua;
+  border-color:aqua;
+  color: black;
+}
+#text1{
+text-align: center;
+margin-top: 10px;
+color: white;
+margin-left: 5px;
+}
+#boxicons{
+  text-align:center;
+  color: white;
+  margin: 5px;
+  margin-left: 80px;
+}
+#footer1 li{
+  text-decoration: none;
+  display: inline-block;
+}
+#footer1 li a i{
+  margin:15px;
+  font-size:26px;
+  grid-template-columns:auto auto auto auto auto;
+  grid-template-rows: auto;
+  column-gap: 0%;
+  row-gap: 10px;
+}#footer1 li a i:hover{
+  color: white;
+}
+.linkedin{
+color: blue;
+
+}.google{
+    color:yellow;
+    
+}.twitter{
+    color:blue;
+   
+}.github{
+  color:white;
+  
+}.instagram{
+    color: red;
+    
+}.facebook{
+    color: blue;
+    
+}
+
+#mobilevideo video{
+  display: none;
+}
+
+@media (max-width:480px)
+{
+    .video{
+      display: none;
+    }
+    #mobilevideo video{
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      
+    }
+    body{
+      background-color: black;
+    }
+    #header ul li{
+      display: block;
+      margin-top: 1%;
+      line-height:10px;
+      
+    }
+    .leftandright{
+      display: grid;
+      grid-template-columns:100%;
+      grid-template-rows: 35% 65%;
+      padding: 0%;
+      row-gap: 20px;
+      
+    }
+  #homepageleft{
+    padding: 50px 0px 0px 50px;
+  }
+  #homepageright
+  {
+    
+    padding-left: 100px;
+    padding-bottom: 40px;
+  }
+  #footername{
+    position: relative;
+    margin-bottom: 2px;
+      color: white;
+      text-align: center;
+      font-size: xx-small;
+    }
+     
+} 

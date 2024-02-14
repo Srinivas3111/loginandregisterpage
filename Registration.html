@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            overflow: hidden;
+        }
+        body{
+            background-image: url(backgroundlight.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-size: 1400px 650px;
+            }
+            #form {
+                display: block;
+                color: white;
+height:50px;
+width:240px;
+background: transparent;
+
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom:3.5px solid orange;
+font-size: 15px;
+font-family: sans-serif;
+letter-spacing: 1px;
+}
+::placeholder{
+color:white;
+font:oblique;
+font-family: Arial, Helvetica, sans-serif;
+}
+#form:focus{
+outline: none;
+color: white;
+}
+.form1{
+   margin-top:90px;
+   margin-left: 230px;
+}
+#buttons{
+    display: inline;
+text-align: center;
+border-radius: 25px;
+margin-left: 5px;
+margin-top:8px;
+border-color:#ff7200;
+background-color:#ff7200;
+color: black;
+border-style: solid;
+width: 100px;
+padding:2px 3px 2px 3px;
+}
+ #buttons:hover{
+  background-color:aqua;
+  border-color:aqua;
+  color: black;
+}
+#checkbox{
+    word-spacing: 5px;
+    font-size: 30px;
+}
+@media (max-width:480px)
+{
+    body{
+
+    background-color: black;
+    background-image:url(blurimage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 480px auto;
+    }
+    #mydiv{
+        position: relative;
+        margin-top:18%;
+        margin-left: 10%;
+    }
+    .form1
+        {
+        
+            margin: 0%;
+            
+        }
+        #form{
+            
+            height:60px;
+            width:250px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        p{
+            font-size: 22px;
+        }
+
+          h1{
+            color: orange;
+            text-align: center;
+            margin-top: 20%;
+          }
+
+
+}
+
+
+
+    
+
+    </style>
+</head>
+<body>
+    <h1>Register</h1>
+   
+    <div id="mydiv">
+        
+    <form  class= "form1" name="form1" action="thank.html" onsubmit="return validform()">
+        <input  id="form"  type="text" placeholder="FirstName" autocomplete="off" name="name">
+        <input  id="form"  type="text" placeholder="LastName" autocomplete="off" name="lname">
+        <input  id="form"  type="email" placeholder="gmail" autocomplete="off" name="email">
+        <input  id="form"  type="password" placeholder="password" autocomplete="off" name="password">
+        <input  id="form"  type="password" placeholder="conform password" autocomplete="off" name="password1">
+        <input  id="form"  type="number" placeholder="Mobile number" autocomplete="off" name="number"><br>
+        <p style="color:white"><input id="checkbox"  type="checkbox">i mentoned above information is True</p>
+        <input  id="buttons" type="submit" name="submit">
+        <input id="buttons"  type="reset">
+    </form>
+
+</div>
+
+    <script>
+        function validform()
+        {
+            var name=document.form1.name.value;
+            var password1=document.form1.password.value;
+            var cpassword=document.form1.password1.value;
+            var email=document.form1.email.value;
+            var number1=document.form1.number.value;
+
+            if(name=="" || name==null)
+            {
+                alert("name should not be null/empty");
+                return false
+            }
+            if(password1.length<6)
+            {  
+                alert("Password must be at least 6 characters long.");  
+                return false;
+            }
+            if(password1==cpassword)
+            {
+               return true
+            }
+            else
+            {
+              alert("password is in correct");
+              return false;
+            }
+            var regx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+            if(regx.text(email))
+            {
+                return true;
+            }
+            else
+            {
+                alert("incorrect !email")
+                return false;
+            }
+            if (number1.length === 10) 
+            {
+            return true; // Valid phone number length
+            } 
+            else{
+                alert("phone number should have 10 digits")
+                return false; // Invalid phone number length
+            }
+        }
+    </script>
+        
+</body>
+</html>

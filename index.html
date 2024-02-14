@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+
+
+    
+         <header id="header">
+            <div id="text">
+              <p><h4><p1 class="logo" style="color: red;">WEB</p1><p2 id="logo2" style="color:blue;">DESIGNER</p2></h4></p>
+            </div>
+              <ul>
+                <li><a href="#home">HOME</a></li><li><a href="#home">ABOUTME</a></li><li><a href="#home">CONTACT</a></li>
+              </ul>
+        </header> 
+
+
+  <div class="leftandright">
+
+        <div class="text-container">
+            
+
+          <div id="homepageleft">
+            <ol id="homename">
+              <li class="hi">Hello!</li>
+              <li class="myname">i'm </li>
+              <li class="skill">~:FRONTEND DEVELOPER :~</li>
+            </ol>
+            <button><a href="Registration.html" id="reg">Register</a></button>
+          </div>
+        
+        </div>
+
+        <div id="homepageright">
+
+          <div id="box">
+            <h4 id="boxlogin">Login</h4>
+
+              <form name="form1" action="thank.html" onsubmit="return validform()">
+              <input id="form" type="email"  placeholder="enter mail/username" name="email" >
+              <input id="form" type="password" placeholder="enter password" name="password">
+              <input id="buttons" type="submit" name="submit">
+              <input id="buttons" type="reset" name="submit">
+              </form>
+              <p id="text1">Don't have an account<button id="boxbuttonreg"><a href="Registration.html">Register</a></button>here<br></p>
+              <p1 id="boxicons">Login in with</p1>
+                <ul id="footer1">
+                    
+                    <li><a  class="linkedin" href="https://linkedin.com"><i id="two" class="fab fa-linkedin"></i></a></li>
+                    <li><a  class="github" href="https://www.github.com"><i id="two" class="fab fa-github"></i></a></li>
+                    <li><a  class="twitter" href="https://twitter.com"><i id="two" class="fab fa-twitter"></i></a></li>
+                    <li><a class="google" href="https://www.google.com"><i id="one" class="fab fa-google"></i></a></li>
+                    <li><a  class="facebook" href="https://www.facebook.com"><i id="two" class="fab fa-facebook"></i></a></li>
+                </ul>
+          </div>
+        </div>
+
+
+    </div> 
+    <p id="footername">Designed by:-Sriniv@s</p>
+        <div class="video">
+            <video autoplay loop muted plays-inline>
+                <source src="production_id_507.mp4" type="video/mp4">
+            </video>
+        </div>
+
+      
+        <div id="mobilevideo" >
+          <video autoplay loop muted plays-inline>
+                <source src="mobilehomepagevideo.mp4" type="video/mp4">
+          </video>
+        </div>
+  
+        
+      
+    <script>
+
+
+
+
+        
+function validform()
+        {
+            var email=document.form1.email.value;
+            var password=document.form1.password.value;
+            
+            
+            if(password.length<6)
+            {  
+                alert("Password must be at least 6 characters long.");  
+                return false;
+            }
+            else
+            {
+              return True;
+            }
+
+            var regx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+            if(regx.text(email))
+            {
+                return true;
+            }
+            else
+            {
+                alert("incorrect !email")
+                return false;
+            }
+          }
+
+     
+
+document.addEventListener("DOMContentLoaded", function() 
+    {
+      const textContainer = document.querySelector(".text-container");
+      
+
+      // Function to stop the animation after a delay (2000 milliseconds)
+      function stopAnimation()
+      {
+        nameElement.style.animation = "none";
+      }
+
+      // Call the stopAnimation function after a delay (2000 milliseconds)
+      setTimeout(stopAnimation, 2000);
+    });
+
+
+    
+  
+    </script>
+
+    </body>
+</html>
